@@ -1,0 +1,26 @@
+{% extends 'recommend_edu/base.html' %}
+{% load static %}
+{% block title %}Recommender System, Results{% endblock %}
+{% block content %}
+
+
+<h3>Step 2. Test results and Goal suggestion</h3>
+<a href="/chat"><h4> Get recommendations and discuss</h4></a>
+<div class='mt-5'>
+    <p><strong>Result analysis for your Profile:</strong></br>
+        <small>{{ profile.user_id}}</small></p>
+    <p><strong>Possible Goal:</strong> {{ profile.goal }}</p>
+    <p><strong>Goal Extra:</strong> {{ profile.goal_extra }}</p>
+    <p><strong>Hobbies:</strong> {{ profile.hobbies }}</p>
+    <p><strong>Skills:</strong> {{ profile.skills }}</p>
+    <p><strong>Age:</strong> {{ profile.age }}</p>
+    <p><strong>Location:</strong> {{ profile.location }}</p>
+    <p><strong>Language:</strong> {{ profile.language }}</p>
+
+    <img src="{% static profile.img  %}" width="800">
+    {% if profile.advice %}
+        <p><strong>Advice Text:</strong> {{ profile.advice_text }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}

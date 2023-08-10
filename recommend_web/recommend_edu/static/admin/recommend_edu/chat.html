@@ -1,0 +1,33 @@
+{% extends 'recommend_edu/base.html' %}
+
+{% block title %} Recommender System, questionary  {% endblock %}
+
+{% block content %}
+
+<p>&nbsp</p>
+<h1>Let's try to find your Growth</h1>
+<p>&nbsp</p>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="text" width="200" name="user_message" placeholder="Your message" required id="bot-talk">
+    <button type="submit">Response</button>
+</form>
+<p></p>
+<div id="chat-history">
+    {% for message in chat_history %}
+    {% if message.user_id == user_id %}
+    <p><strong>User: </strong> {{ message.user_message }}</p>
+
+    <p class = 'bot-text'><strong>Assistant: </strong></p>
+            <div id = 'bot-style'>{{ message.bot_response | safe }}</div>
+    {% endif %}
+    {% empty %}
+    <p>No chat history yet.</p>
+    <!-- Add the initial "Hello" message here -->
+    <p><strong>Bot:</strong> Hello! How can I assist you today?</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

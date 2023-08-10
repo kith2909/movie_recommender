@@ -1,0 +1,138 @@
+body {
+    background: linear-gradient(180deg, rgba(255,255,255, 0),  rgba(255,255,255, 0.5) 80%, #4caa64);
+    color: #222;
+    background-repeat: no-repeat;
+    min-height: 980px;
+}
+#fancy1 {
+    background:  url('../img/linetop.png') top right;
+    background-repeat: no-repeat;
+    min-height: 900px;
+}
+
+#fancy {
+    background:  url('../img/line.png') bottom left;
+    background-repeat: no-repeat;
+    min-height: 900px;
+}
+p {
+   text-align: justify;
+   padding: 5px;
+   background-repeat: no-repeat;
+}
+
+a {
+   color: #555; /* This is a dark green color */
+   transition: color 1s ease;
+}
+
+a:hover {
+   color: #4caa64; /* This is a dark green color */
+}
+
+#logo {
+    color: #4caa64! important;
+}
+
+.container {
+  max-width: 960px;
+  padding-bottom: 100px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+#bot-style {
+    border : 1px solid rgba(50, 50, 50, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.bd-placeholder-img {
+        font-size: 1.25rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+ }
+
+@media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+ }
+
+
+/* Hide the default checkbox */
+.custom-checkbox {
+    float: right;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid  rgba(133, 133, 133, 0.6);
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin: 5px 0px -5px 10px;
+}
+
+/* Add the custom checkbox appearance */
+.custom-checkbox:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #4caa64;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Change the appearance when checked */
+.custom-checkbox:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.select-control {
+        width: 70px!important;
+        margin: 0 0 0 10px;
+        float: right;
+        border: 1px solid  rgba(133, 133, 133, 0.6);
+        border-radius: 5px;
+}
+
+
+input[type="submit"], button[type="submit"] {
+    background-color:  #ebfcef;
+    color: #222;
+    background-repeat: no-repeat;
+    min-width: 100px;
+    border : 1px solid rgba(50, 50, 50, 0.5);
+    border-radius: 5px;
+    padding: 10px 20px!important;
+    transition: background-color 1s ease;
+}
+
+
+input[type="submit"]:hover, button[type="submit"]:hover{
+    background-color:  #4caa64;
+    transition: background-color 1s ease;
+}
+
+
+ #bot-talk {
+    color: #222;
+    min-width: 300px;
+    border : 1px solid rgba(50, 50, 50, 0.5);
+    border-radius: 5px;
+    padding: 10px 20px!important;
+    transition: background-color 1s ease;
+}

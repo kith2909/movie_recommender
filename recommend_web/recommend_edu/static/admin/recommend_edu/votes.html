@@ -1,0 +1,26 @@
+{% extends 'recommend_edu/base.html' %}
+
+{% block title %}Recommender System, Results{% endblock %}
+{% block content %}
+
+
+<h3>Step 2. Results and recommendations</h3>
+
+<div class='mt-5'>
+    <h4 class='mb-5'>Result analysis for Profile {{ profile.user_id}}</h4>
+    <p><strong>Goal:</strong> {{ profile.goal }}</p>
+    <p><strong>Goal Extra:</strong> {{ profile.goal_extra }}</p>
+    <p><strong>Hobbies:</strong> {{ profile.hobbies }}</p>
+    <p><strong>Skills:</strong> {{ profile.skills }}</p>
+    <p><strong>Age:</strong> {{ profile.age }}</p>
+    <p><strong>Location:</strong> {{ profile.location }}</p>
+    <p><strong>Language:</strong> {{ profile.language }}</p>
+
+    <img src={{ profile.img }} alt="Line Image">
+
+    {% if profile.advice %}
+        <p><strong>Advice Text:</strong> {{ profile.advice_text }}</p>
+    {% endif %}
+</div>
+
+{% endblock %}
